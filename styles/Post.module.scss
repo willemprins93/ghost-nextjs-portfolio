@@ -1,0 +1,81 @@
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opactity: 1;
+    transform: translateX(0);
+  }
+}
+
+.container {
+  background-color: lightgrey;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 50px;
+
+  animation: slideInFromRight 1s;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+  padding: 0px;
+}
+
+.container p,
+.container ul,
+.container ol,
+.container blockquote {
+  padding: 10px 20%;
+  line-height: 1.8em;
+}
+
+.container ul,
+.container ol {
+  margin: 40px 60px;
+}
+
+.container h2,
+.container h3,
+.container h4,
+.container h5 {
+  padding: 60px 25% 0;
+}
+
+.backButtonContainer {
+  width: 100%;
+  height: 0;
+  margin-bottom: 100px;
+}
+
+.backButton {
+  position: relative;
+  display: inline-block;
+  margin: 30px 58px 0 58px;
+}
+
+.backButton:hover {
+  border-bottom: 2px solid black;
+}
+
+.featureImage {
+  padding: 0 !important;
+  height: 450px !important;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.title {
+  letter-spacing: -10px;
+  padding: 40px 50px 10px 50px;
+  margin: 0;
+  width: 100%;
+  font-size: 160px;
+  color: white;
+  background: black;
+}
