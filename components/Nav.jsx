@@ -1,5 +1,5 @@
 import CustomLink from "./CustomLink";
-import Link from "next/Link";
+import Link from "next/link";
 import navStyles from "../styles/Nav.module.scss";
 
 const Nav = () => {

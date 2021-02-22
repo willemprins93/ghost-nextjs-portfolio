@@ -1,4 +1,4 @@
-import Link from "next/Link";
+import Link from "next/link";
 import footerStyles from "../styles/Footer.module.scss";
 
 const Footer = () => {
