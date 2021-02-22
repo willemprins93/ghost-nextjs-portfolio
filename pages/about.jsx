@@ -11,7 +11,8 @@ const About = () => {
         people of different disciplines, developing a strong eye for design and
         detail along the way. I thrive in situations where I can produce
         creative solutions to complex problems.
-        <br />
+      </p>
+      <p>
         During my time as a photographerI have always felt a strong curiosity
         towards tech and digital media. And, wanting to challenge myself to
         broaden my technical skillset, I discovered web-development to be the
@@ -19,7 +20,8 @@ const About = () => {
         Ironhack shortly after where I honed my skills in Javascript, HTML, CSS,
         MongoDB, Express, React, Node and more, in preparation for the next big
         step in my career.
-        <br />
+      </p>
+      <p>
         My goal is to be able to design elegant and fully responsive web
         applications front-to-back by learning the latest and most relevant
         technologies, to optimise and rethink the way we interact with
