@@ -27,7 +27,7 @@ const Home = (props) => {
 
   return (
     <div className={styles.container}>
-      <h1>Welcome to my website!</h1>
+      <h1>Welcome!</h1>
       <h2>This website is currently under construction...</h2>
       <div className={styles.postGrid}>
         {posts.map((post) => (
