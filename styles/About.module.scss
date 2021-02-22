@@ -1,0 +1,20 @@
+.container {
+  background-color: lightgrey;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 50px;
+
+  animation: slideInFromRight 1s;
+}
+
+.container p,
+.container ul,
+.container ol,
+.container blockquote {
+  font-size: 18px;
+  padding: 10px 20%;
+  line-height: 1.8em;
+}
