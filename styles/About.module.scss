@@ -1,3 +1,14 @@
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opactity: 1;
+    transform: translateX(0);
+  }
+}
+
 .container {
   background-color: lightgrey;
   min-height: 100vh;
@@ -8,6 +19,10 @@
   padding-bottom: 50px;
 
   animation: slideInFromRight 1s;
+}
+
+.container h1 {
+  padding-top: 50px;
 }
 
 .container p,
