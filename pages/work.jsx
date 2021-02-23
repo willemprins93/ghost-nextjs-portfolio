@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
-import styles from "../styles/Home.module.scss";
+import styles from "../styles/Work.module.scss";
 
 const BLOG_URL = process.env.BLOG_URL;
 const CONTENT_API_KEY = process.env.CONTENT_API_KEY;
@@ -21,16 +21,24 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-const Home = (props) => {
+const Work = (props) => {
   const posts = props.posts.posts;
-  console.log(posts);
 
   return (
     <div className={styles.container}>
-      <h1>Welcome!</h1>
-      <h2>This website is currently under construction...</h2>
+      <h2>Here's what I've made:</h2>
+      <div className={styles.postGrid}>
+        {posts.map((post) => (
+          <Link href={`/post/${post.slug}`} key={post.id}>
+            <div className={styles.postCard}>
+              <img src={post.feature_image} />
+              <h3>{post.title}</h3>
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default Work;
