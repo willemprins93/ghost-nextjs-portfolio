@@ -6,6 +6,7 @@ body {
   margin: 0;
   font-family: "Kumbh Sans", sans-serif;
   background-color: white;
+  font-weight: 100;
 }
 
 a {
@@ -27,6 +28,11 @@ a {
   margin: -4px 0;
   display: flex !important;
   flex-direction: row !important;
+}
+
+.kg-image {
+  margin: 100px 0;
+  max-height: 70vh !important;
 }
 
 .selected {

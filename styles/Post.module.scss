@@ -9,6 +9,10 @@
   }
 }
 
+.loading {
+  margin-top: 80px;
+}
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -21,9 +25,14 @@
 }
 
 .container img {
+  max-height: calc(100vh - 100px);
+  width: auto;
+  object-fit: contain;
+}
+
+.container img {
   width: 100%;
   height: auto;
-  max-height: calc(100vh - 80px);
   padding: 0px;
 }
 
@@ -32,7 +41,7 @@
 .container ol,
 .container blockquote {
   font-size: 18px;
-  padding: 10px 20%;
+  padding: 15px 20%;
   line-height: 1.8em;
 }
 
@@ -41,11 +50,16 @@
   margin: 40px 60px;
 }
 
+.container pre {
+  padding: 40px 10%;
+  background: rgb(238, 238, 238);
+}
+
 .container h2,
 .container h3,
 .container h4,
 .container h5 {
-  padding: 60px 25% 0;
+  padding: 20px 20% 0;
 }
 
 .backButtonContainer {
@@ -67,7 +81,8 @@
 .featureImage {
   padding: 0 !important;
   height: 450px !important;
-  object-fit: cover;
+  width: 100%;
+  object-fit: cover !important;
   overflow: hidden;
 }
 

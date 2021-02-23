@@ -1,9 +1,31 @@
 import CustomLink from "./CustomLink";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import navStyles from "../styles/Nav.module.scss";
 
 const Nav = () => {
-  return (
+  const router = useRouter();
+  console.log(router);
+
+  return router.pathname === "/" || router.pathname === "/about" ? (
+    <nav className={navStyles.nav}>
+      <Link href="/">
+        <h2>WILLEM PRINS</h2>
+      </Link>
+      <ul>
+        <li>
+          <CustomLink href="/">
+            <a>Home</a>
+          </CustomLink>
+        </li>
+        <li>
+          <CustomLink href="/about">
+            <a>About</a>
+          </CustomLink>
+        </li>
+      </ul>
+    </nav>
+  ) : (
     <nav className={navStyles.nav}>
       <Link href="/">
         <h2>WILLEM PRINS</h2>

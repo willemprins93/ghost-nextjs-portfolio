@@ -36,6 +36,8 @@ const Post = (props) => {
     return <h1>Loading...</h1>;
   }
 
+  console.log(post.html);
+
   return (
     <div className={styles.container}>
       <img className={styles.featureImage} src={post.feature_image} />
