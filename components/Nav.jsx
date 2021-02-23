@@ -15,6 +15,11 @@ const Nav = () => {
           </CustomLink>
         </li>
         <li>
+          <CustomLink href="/work">
+            <a>Work</a>
+          </CustomLink>
+        </li>
+        <li>
           <CustomLink href="/about">
             <a>About</a>
           </CustomLink>
