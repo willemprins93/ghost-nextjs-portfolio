@@ -6,14 +6,15 @@
   width: 100%;
   height: 80px;
   background-color: black;
-  padding: 5px 30px 0;
+  padding: 0 30px;
   box-shadow: 0px -20px 100px rgba(122, 122, 122, 0.35);
 }
 
 .nav h2 {
   color: white;
-  letter-spacing: -1px;
+  letter-spacing: 0px;
   cursor: pointer;
+  font-weight: 800;
 }
 
 .nav ul {
@@ -54,4 +55,32 @@
 
 .nav ul li a:hover {
   color: black;
+}
+
+@media only screen and (max-width: 1000px) {
+  .nav ul li a {
+    margin: 0 12px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .nav {
+    height: 100px;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav h2 {
+    margin-top: 10px;
+    line-height: 0em;
+  }
+
+  .nav ul {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+  }
 }

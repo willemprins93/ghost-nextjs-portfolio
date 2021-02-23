@@ -16,7 +16,7 @@ const About = () => {
         creative solutions to complex problems.
       </p>
       <p>
-        During my time as a photographerI have always felt a strong curiosity
+        During my time as a photographer I have always felt a strong curiosity
         towards tech and digital media. And, wanting to challenge myself to
         broaden my technical skillset, I discovered web-development to be the
         perfect marriage between logic, design and creative thinking. I joined

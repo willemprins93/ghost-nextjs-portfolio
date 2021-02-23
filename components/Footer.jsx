@@ -29,7 +29,7 @@ const Footer = () => {
       </div>
       <div className={footerStyles.column}>
         <div className={footerStyles.innerColumn}>
-          <h4></h4>
+          <h4>Feel free to drop me a message anytime!</h4>
         </div>
       </div>
     </nav>
