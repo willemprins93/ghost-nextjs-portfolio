@@ -1,12 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: "Manrope", sans-serif;
   background-color: white;
   font-weight: 100;
+}
+
+p {
+  letter-spacing: 0.5px;
 }
 
 a {
@@ -19,22 +24,59 @@ a {
 }
 
 .kg-card.kg-gallery-card.kg-width-wide {
-  width: 100%;
-  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 100px 5%;
 }
 
 .kg-gallery-row {
-  width: 100%;
-  margin: -4px 0;
+  width: 80%;
+  margin: 20px 10%;
   display: flex !important;
   flex-direction: row !important;
+  justify-content: flex-end !important;
+  align-items: center;
+}
+
+.kg-gallery-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kg-gallery-image img {
+  margin: 0;
+  padding: 10px 20px;
+  width: 100%;
+  height: auto;
+}
+
+.kg-image-card {
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .kg-image {
-  margin: 100px 0;
-  max-height: 70vh !important;
+  max-height: calc(100vh - 200px);
+  width: auto;
+  object-fit: contain;
 }
 
 .selected {
-  border-bottom: 2px solid white !important;
+  position: relative;
+  color: black !important;
+}
+
+.selected::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  background: white;
+  padding: 5px 10px;
+  top: -4px;
+  left: -9px;
+  width: 100% !important;
+  height: 20px;
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
+import Head from "next/head";
+import Router, { useRouter } from "next/router";
 import styles from "../../styles/Post.module.scss";
 
 const BLOG_URL = process.env.BLOG_URL;
@@ -33,19 +34,20 @@ const Post = (props) => {
   const router = useRouter();
 
   if (router.isFallback) {
-    return <h1>Loading...</h1>;
+    return <h1 className={styles.loading}>Loading...</h1>;
   }
-
-  console.log(post.html);
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>{post.title}</title>
+      </Head>
       <img className={styles.featureImage} src={post.feature_image} />
       <h1 className={styles.title}>{post.title}</h1>
       <div className={styles.backButtonContainer}>
-        <Link href="/">
+        <div onClick={() => Router.back()}>
           <a className={styles.backButton}>Go Back</a>
-        </Link>
+        </div>
       </div>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>

@@ -26,6 +26,9 @@ const Work = (props) => {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Work</title>
+      </Head>
       <h2>Here's what I've made:</h2>
       <div className={styles.postGrid}>
         {posts.map((post) => (

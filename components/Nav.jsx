@@ -10,7 +10,9 @@ const Nav = () => {
   return router.pathname === "/" || router.pathname === "/about" ? (
     <nav className={navStyles.nav}>
       <Link href="/">
-        <h2>WILLEM PRINS</h2>
+        <a>
+          <h2>WILLEM PRINS</h2>
+        </a>
       </Link>
       <ul>
         <li>
@@ -28,7 +30,9 @@ const Nav = () => {
   ) : (
     <nav className={navStyles.nav}>
       <Link href="/">
-        <h2>WILLEM PRINS</h2>
+        <a>
+          <h2>WILLEM PRINS</h2>
+        </a>
       </Link>
       <ul>
         <li>
