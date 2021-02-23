@@ -8,7 +8,10 @@ const Footer = () => {
       <div className={footerStyles.column}>
         <div className={footerStyles.innerColumn}>
           <h3>© WILLEM PRINS 2021</h3>
-          <h4>Built on Ghost CMS and Next.js</h4>
+          <h4>
+            Built on <a href="https://ghost.org/">Ghost CMS</a> and{" "}
+            <a href="https://nextjs.org/">Next.js</a>
+          </h4>
         </div>
       </div>
       <div className={footerStyles.column}>
