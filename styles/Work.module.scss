@@ -42,11 +42,12 @@
 }
 
 .postCard {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 33%;
   cursor: pointer;
-  padding: 0 3% 20px;
+  padding: 0 3% 40px;
 }
 
 .postCard img {
@@ -64,14 +65,53 @@
   background: black;
   color: white;
   transition: all 0.15s ease-in-out;
+  position: relative;
 }
 
 .postCard:hover h3 {
-  padding: 2px 7px 22px;
+  padding: 2px 7px 56px;
 }
 
 .postCard:hover img {
-  height: 190px !important;
+  height: 156px !important;
+}
+
+.excerpt {
+  line-height: 1.1em;
+  font-size: 14px;
+  font-weight: 200;
+  z-index: 998;
+  color: white;
+  background: white;
+  opacity: 0;
+  position: absolute;
+  top: 18px;
+  left: 0;
+  padding: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.postCard:hover .excerpt {
+  height: auto;
+  opacity: 1;
+  color: black;
+}
+
+//cover excerpt during transition
+.postCard::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 240px;
+  background-color: white;
+  z-index: 998;
 }
 
 @media only screen and (max-width: 1400px) {

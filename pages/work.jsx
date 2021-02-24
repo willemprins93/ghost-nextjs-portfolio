@@ -7,7 +7,7 @@ const CONTENT_API_KEY = process.env.CONTENT_API_KEY;
 
 async function getPosts() {
   const res = await fetch(
-    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&fields=id,title,slug,feature_image,custom_excerpt`
+    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}`
   ).then((res) => res.json());
 
   console.log(res);
@@ -23,6 +23,7 @@ export const getStaticProps = async ({ params }) => {
 
 const Work = (props) => {
   const posts = props.posts.posts;
+  console.log(posts);
 
   return (
     <div className={styles.container}>
@@ -35,7 +36,10 @@ const Work = (props) => {
           <Link href={`/post/${post.slug}`} key={post.id}>
             <div className={styles.postCard}>
               <img src={post.feature_image} />
-              <h3>{post.title}</h3>
+              <h3>
+                {post.title}
+                <p className={styles.excerpt}>{post.excerpt}</p>
+              </h3>
             </div>
           </Link>
         ))}
