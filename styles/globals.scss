@@ -10,6 +10,11 @@ body {
   font-weight: 300;
 }
 
+::selection {
+  background: black;
+  color: white;
+}
+
 p {
   letter-spacing: 0.5px;
 }
@@ -31,8 +36,8 @@ a {
 }
 
 .kg-gallery-row {
-  width: 80%;
-  margin: 20px 10%;
+  width: 90%;
+  margin: 20px 5%;
   display: flex !important;
   flex-direction: row !important;
   justify-content: flex-end !important;
@@ -61,6 +66,7 @@ a {
 .kg-image {
   max-height: calc(100vh - 200px);
   width: auto;
+  max-width: 90vw;
   object-fit: contain;
 }
 
@@ -77,6 +83,29 @@ a {
   padding: 5px 10px;
   top: -4px;
   left: -9px;
-  width: 100% !important;
-  height: 20px;
+  width: 100%;
+  height: 20px !important;
+}
+
+@media only screen and (max-width: 1400px) {
+  .kg-gallery-row {
+    width: 90vw;
+    margin: 5px 0;
+  }
+
+  .kg-gallery-image img {
+    padding: 10px 12px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .kg-gallery-row {
+    width: 90vw;
+    margin: 5px 0;
+    flex-direction: column !important;
+  }
+
+  .kg-gallery-image img {
+    padding: 10px 0;
+  }
 }

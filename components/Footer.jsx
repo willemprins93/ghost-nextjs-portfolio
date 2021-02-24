@@ -9,7 +9,7 @@ const Footer = () => {
         <div className={footerStyles.innerColumn}>
           <h3>© WILLEM PRINS 2021</h3>
           <h4>
-            Built on <a href="https://ghost.org/">Ghost CMS</a> and{" "}
+            Built on <a href="https://ghost.org/">Ghost</a> and{" "}
             <a href="https://nextjs.org/">Next.js</a>
           </h4>
         </div>

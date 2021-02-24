@@ -7,7 +7,7 @@ const About = () => {
       <Head>
         <title>About</title>
       </Head>
-      <h1>About page.</h1>
+      <h1>About me ✍️</h1>
       <p>
         I am a creative minded and passionate web developer with a background in
         commercial photography. I have worked across international markets with

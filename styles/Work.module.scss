@@ -23,7 +23,7 @@
 }
 
 .postGrid {
-  padding: 50px 20%;
+  padding: 50px 15%;
   display: flex;
   flex-wrap: wrap;
 }
@@ -31,14 +31,50 @@
 .postCard {
   display: flex;
   flex-direction: column;
-  width: 46%;
+  width: 33%;
   cursor: pointer;
-  padding: 0 2% 20px;
+  padding: 0 3% 20px;
 }
 
 .postCard img {
   width: 100%;
-  height: 200px !important;
+  height: 210px !important;
   object-fit: cover;
   height: auto;
+  transition: all 0.15s ease-in-out;
+}
+
+.postCard h3 {
+  margin-top: 0px;
+  padding: 2px 7px;
+  width: 100%;
+  background: black;
+  color: white;
+  transition: all 0.15s ease-in-out;
+}
+
+.postCard:hover h3 {
+  padding: 2px 7px 22px;
+}
+
+.postCard:hover img {
+  height: 190px !important;
+}
+
+@media only screen and (max-width: 1400px) {
+  .postCard {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .postCard {
+    width: 100%;
+    cursor: pointer;
+    padding: 0 3% 20px;
+  }
+
+  .postGrid {
+    padding: 50px 10%;
+  }
 }
