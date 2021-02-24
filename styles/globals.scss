@@ -10,6 +10,10 @@ body {
   font-weight: 300;
 }
 
+#contact-icon {
+  fill: white;
+}
+
 ::selection {
   background: black;
   color: white;
@@ -115,11 +119,13 @@ a {
 .kg-bookmark-card .kg-bookmark-title {
   font-weight: 800;
   color: black;
+  font-size: 16px;
+  padding-bottom: 6px;
 }
 
 .kg-bookmark-metadata {
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 14px;
   display: flex;
   align-items: center;
   color: black;
@@ -145,6 +151,19 @@ a {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.kg-card-hascaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+figcaption {
+  font-size: 16px;
+  color: grey;
+  margin-top: 15px;
 }
 
 @media only screen and (max-width: 1400px) {

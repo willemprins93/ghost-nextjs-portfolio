@@ -20,12 +20,14 @@ const Footer = () => {
         >
           <Link href="mailto:willemprins93@gmail.com">
             <a className={footerStyles.contactIcon}>
-              <i aria-hidden className="far fa-envelope"></i>
+              <img src="/mail.svg" />
+              {/* <i aria-hidden className="far fa-envelope"></i> */}
             </a>
           </Link>
           <Link href="https://www.linkedin.com/in/willem-prins-dev/">
             <a className={footerStyles.contactIcon}>
-              <i aria-hidden className="fab fa-linkedin-in"></i>
+              <img src="/linkedin.svg" />
+              {/* <i aria-hidden className="fab fa-linkedin-in"></i> */}
             </a>
           </Link>
         </div>
