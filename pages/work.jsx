@@ -22,7 +22,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 const Work = (props) => {
-  const posts = props.posts.posts;
+  const posts = props.posts.posts.sort((post) => (post.featured ? -1 : 1));
   console.log(posts);
 
   return (
@@ -38,7 +38,7 @@ const Work = (props) => {
               <img src={post.feature_image} />
               <h3>
                 {post.title}
-                <p className={styles.excerpt}>{post.excerpt}</p>
+                {/* <p className={styles.excerpt}>{post.excerpt}</p> */}
               </h3>
             </div>
           </Link>

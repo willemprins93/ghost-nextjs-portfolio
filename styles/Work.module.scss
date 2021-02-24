@@ -59,6 +59,7 @@
 }
 
 .postCard h3 {
+  position: absolute;
   margin-top: 0px;
   padding: 2px 7px;
   width: 100%;
@@ -69,11 +70,12 @@
 }
 
 .postCard:hover h3 {
+  margin-top: -54px;
   padding: 2px 7px 56px;
 }
 
 .postCard:hover img {
-  height: 156px !important;
+  // height: 156px !important;
 }
 
 .excerpt {
@@ -104,14 +106,26 @@
 }
 
 //cover excerpt during transition
-.postCard::after {
+.postCard h3::after {
   content: "";
+  line-height: 2em;
+  padding-top: 30px;
+  font-size: 14px;
+  text-align: center;
+  color: white;
   position: absolute;
   width: 100%;
-  height: 50px;
-  top: 240px;
+  height: 26px;
+  top: 100%;
+  left: 0;
   background-color: white;
   z-index: 998;
+  transition: all 0.15s ease-in-out;
+}
+
+.postCard:hover h3::after {
+  color: rgb(0, 0, 0);
+  top: 36%;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -124,7 +138,7 @@
   .postCard {
     width: 100%;
     cursor: pointer;
-    padding: 0 3% 20px;
+    padding: 0 3% 40px;
   }
 
   .postGrid {
