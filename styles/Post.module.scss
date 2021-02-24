@@ -43,7 +43,17 @@
 }
 
 .container pre {
-  padding: 40px 10%;
+  color: rgb(122, 122, 122);
+  page-break-inside: avoid;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word;
+  padding: 40px 15%;
   background: rgb(238, 238, 238);
 }
 
