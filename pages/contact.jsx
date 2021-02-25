@@ -1,82 +1,74 @@
 import Head from "next/head";
 import React from "react";
-import styles from "../styles/About.module.scss";
+import { useRouter } from "next/router";
+import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 
-const encode = (data) => {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
+import styles from "../styles/Contact.module.scss";
 
-class Contact extends React.Component {
-  state = {
-    name: "",
-    email: "",
-    message: "",
-  };
+const Contact = () => {
+  const router = useRouter();
+  const recaptchaRef = React.createRef();
 
-  handleSubmit = (e) => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state }),
-    })
-      .then(() => console.log("success"))
-      .catch((error) => console.log(error));
-
+  const sendEmail = (e) => {
     e.preventDefault();
+
+    console.log(e.target);
+
+    emailjs
+      .sendForm(
+        "service_1dawhgt",
+        "template_wryxvd7",
+        e.target,
+        "user_tuw22ufcCwUdAiewMEuPk"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          router.push("/success");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
-  handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
-
-  render() {
-    const { name, email, message } = this.state;
-
-    return (
-      <div className={styles.container}>
-        <Head>
-          <title>Contact</title>
-        </Head>
-        <form
-          name="contact"
-          method="POST"
-          onSubmit={this.handleSubmit}
-          action="/about"
-        >
-          <input type="hidden" name="contact-form" value="contact" />
-          <p>
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </p>
-          <p>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-          </p>
-          <p>
-            <label htmlFor="message">Message:</label>
-            <textarea
-              name="message"
-              value={message}
-              onChange={this.handleChange}
-            />
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
-      </div>
-    );
-  }
-}
+  return (
+    <div className={styles.container}>
+      <Head>
+        <title>Contact</title>
+      </Head>
+      <h1>Thoughts? Questions? 🍩? Send me a message!</h1>
+      <form name="contact" method="POST" onSubmit={sendEmail} action="/about">
+        <input type="hidden" name="contact-form" value="contact" />
+        <p>
+          <label htmlFor="name">
+            Name <span>*</span>
+          </label>
+          <input type="text" name="name" required />
+        </p>
+        <p>
+          <label htmlFor="email">
+            Email <span>*</span>
+          </label>
+          <input type="email" name="email" required />
+        </p>
+        <p>
+          <label htmlFor="message">
+            Message <span>*</span>
+          </label>
+          <textarea name="message" rows="8" required />
+        </p>
+        <p>
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            sitekey="6LeLWmcaAAAAAH5_l2GEBcv6e-UntO1pVU16Dmpn"
+          />
+          <button type="submit">Send</button>
+        </p>
+      </form>
+    </div>
+  );
+};
 
 export default Contact;

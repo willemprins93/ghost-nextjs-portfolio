@@ -25,6 +25,11 @@ const Nav = () => {
             <a>About</a>
           </CustomLink>
         </li>
+        <li>
+          <CustomLink href="/contact">
+            <a>Contact</a>
+          </CustomLink>
+        </li>
       </ul>
     </nav>
   ) : (
@@ -48,6 +53,11 @@ const Nav = () => {
         <li>
           <CustomLink href="/about">
             <a>About</a>
+          </CustomLink>
+        </li>
+        <li>
+          <CustomLink href="/contact">
+            <a>Contact</a>
           </CustomLink>
         </li>
       </ul>
