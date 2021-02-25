@@ -8,16 +8,16 @@ import styles from "../styles/Contact.module.scss";
 const Contact = () => {
   const router = useRouter();
   const recaptchaRef = React.createRef();
-  const service_id = process.env.EMAILJS_SERVICE_ID;
-  const template_id = process.env.EMAILJS_TEMPLATE_ID;
-  const user_id = process.env.EMAILJS_USER_ID;
+  const SERVICE_ID = process.env.EMAILJS_SERVICE_ID;
+  const TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID;
+  const USER_ID = process.env.EMAILJS_USER_ID;
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     console.log(e.target);
 
-    emailjs.sendForm(service_id, template_id, e.target, user_id).then(
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
       (result) => {
         console.log(result.text);
         router.push("/success");
