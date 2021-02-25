@@ -10,7 +10,6 @@ async function getPosts() {
     `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}`
   ).then((res) => res.json());
 
-  console.log(res);
   return res;
 }
 
@@ -23,7 +22,6 @@ export const getStaticProps = async ({ params }) => {
 
 const Work = (props) => {
   const posts = props.posts.posts.sort((post) => (post.featured ? -1 : 1));
-  console.log(posts);
 
   return (
     <div className={styles.container}>

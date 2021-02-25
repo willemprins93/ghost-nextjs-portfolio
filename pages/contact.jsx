@@ -5,27 +5,37 @@ import emailjs from "emailjs-com";
 
 import styles from "../styles/Contact.module.scss";
 
-const Contact = () => {
+export const getStaticProps = async ({ params }) => {
+  return {
+    props: {
+      SERVICE_ID: process.env.EMAILJS_SERVICE_ID,
+      TEMPLATE_ID: process.env.EMAILJS_TEMPLATE_ID,
+      USER_ID: process.env.EMAILJS_USER_ID,
+    },
+  };
+};
+
+const Contact = (props) => {
   const router = useRouter();
-  const recaptchaRef = React.createRef();
-  const SERVICE_ID = process.env.EMAILJS_SERVICE_ID;
-  const TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID;
-  const USER_ID = process.env.EMAILJS_USER_ID;
+
+  const { SERVICE_ID, TEMPLATE_ID, USER_ID } = props;
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     console.log(e.target);
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID).then(
-      (result) => {
-        console.log(result.text);
-        router.push("/success");
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+    emailjs
+      .sendForm(`${SERVICE_ID}`, `${TEMPLATE_ID}`, e.target, `${USER_ID}`)
+      .then(
+        (result) => {
+          console.log(result.text);
+          router.push("/success");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
