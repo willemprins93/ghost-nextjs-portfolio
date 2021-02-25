@@ -2,35 +2,30 @@ import Head from "next/head";
 import React from "react";
 import { useRouter } from "next/router";
 import emailjs from "emailjs-com";
-import ReCAPTCHA from "react-google-recaptcha";
 
 import styles from "../styles/Contact.module.scss";
 
 const Contact = () => {
   const router = useRouter();
   const recaptchaRef = React.createRef();
+  const service_id = process.env.EMAILJS_SERVICE_ID;
+  const template_id = process.env.EMAILJS_TEMPLATE_ID;
+  const user_id = process.env.EMAILJS_USER_ID;
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     console.log(e.target);
 
-    emailjs
-      .sendForm(
-        "service_1dawhgt",
-        "template_wryxvd7",
-        e.target,
-        "user_tuw22ufcCwUdAiewMEuPk"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          router.push("/success");
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm(service_id, template_id, e.target, user_id).then(
+      (result) => {
+        console.log(result.text);
+        router.push("/success");
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
 
   return (
@@ -60,10 +55,6 @@ const Contact = () => {
           <textarea name="message" rows="8" required />
         </p>
         <p>
-          <ReCAPTCHA
-            ref={recaptchaRef}
-            sitekey="6LeLWmcaAAAAAH5_l2GEBcv6e-UntO1pVU16Dmpn"
-          />
           <button type="submit">Send</button>
         </p>
       </form>
