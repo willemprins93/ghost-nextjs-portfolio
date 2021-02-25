@@ -7,7 +7,9 @@ const Nav = () => {
   const router = useRouter();
   console.log(router);
 
-  return router.pathname === "/" || router.pathname === "/about" ? (
+  return router.pathname === "/" ||
+    router.pathname === "/about" ||
+    router.pathname === "/contact" ? (
     <nav className={navStyles.nav}>
       <Link href="/">
         <a>
