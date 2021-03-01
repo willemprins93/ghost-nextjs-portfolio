@@ -5,7 +5,6 @@ import navStyles from "../styles/Nav.module.scss";
 
 const Nav = () => {
   const router = useRouter();
-  console.log(router);
 
   return router.pathname === "/" ||
     router.pathname === "/about" ||

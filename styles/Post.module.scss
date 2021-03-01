@@ -15,6 +15,7 @@
 
 .container {
   min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -31,6 +32,15 @@
   font-size: 18px;
   padding: 15px 20%;
   line-height: 1.8em;
+}
+
+.container p a {
+  border-bottom: 1px solid black;
+}
+
+.container p a:hover {
+  color: grey;
+  border-color: grey;
 }
 
 .container blockquote {
@@ -75,20 +85,15 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
-  margin: 48px 58px 0 58px;
-  padding: 0px;
+  margin: 48px 43px 0 58px;
+  padding: 0px 0 5px;
   font-weight: 600;
-  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  border-bottom: 2px solid black;
   transition: all 0.15s ease-out;
 }
 
-.backButton:hover {
-  margin-top: 43px;
-  padding-bottom: 5px;
-  border-bottom: 2px solid black;
-}
-
 .featureImage {
+  background: rgb(235, 235, 235);
   padding: 0 !important;
   height: 450px !important;
   width: 100%;
@@ -108,10 +113,29 @@
   background: black;
 }
 
+@media only screen and (min-width: 1201px) {
+  .backButton {
+    margin: 48px 58px 0 58px;
+    padding: 0px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0);
+    transition: all 0.15s ease-out;
+  }
+
+  .backButton:hover {
+    margin-top: 43px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+  }
+}
+
 @media only screen and (max-width: 1400px) {
   .title {
     font-size: 120px;
     letter-spacing: -5px;
+  }
+
+  .container {
+    animation: none;
   }
 }
 

@@ -28,7 +28,7 @@ const Work = (props) => {
       <Head>
         <title>Work</title>
       </Head>
-      <h2>Here's what I've made:</h2>
+      <h2>Here's what I've been working on: </h2>
       <div className={styles.postGrid}>
         {posts.map((post) => (
           <Link href={`/post/${post.slug}`} key={post.id}>

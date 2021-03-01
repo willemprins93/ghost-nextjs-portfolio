@@ -51,6 +51,7 @@
 }
 
 .postCard img {
+  background: rgb(235, 235, 235);
   width: 100%;
   height: 210px !important;
   object-fit: cover;
@@ -67,11 +68,6 @@
   color: white;
   transition: all 0.15s ease-in-out;
   position: relative;
-}
-
-.postCard:hover h3 {
-  margin-top: -54px;
-  padding: 2px 7px 56px;
 }
 
 // .postCard:hover img {
@@ -99,12 +95,6 @@
   transition: all 0.2s ease-in-out;
 }
 
-.postCard:hover .excerpt {
-  height: auto;
-  opacity: 1;
-  color: black;
-}
-
 //cover excerpt during transition
 .postCard h3::after {
   content: "";
@@ -123,12 +113,29 @@
   transition: all 0.15s ease-in-out;
 }
 
-.postCard:hover h3::after {
-  color: rgb(0, 0, 0);
-  top: 36%;
+@media only screen and (min-width: 1201px) {
+  .postCard:hover h3 {
+    margin-top: -54px;
+    padding: 2px 7px 56px;
+  }
+
+  .postCard:hover .excerpt {
+    height: auto;
+    opacity: 1;
+    color: black;
+  }
+
+  .postCard:hover h3::after {
+    color: rgb(0, 0, 0);
+    top: 36%;
+  }
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1200px) {
+  .container {
+    animation: none;
+  }
+
   .postCard {
     width: 50%;
   }

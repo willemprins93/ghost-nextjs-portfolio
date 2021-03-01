@@ -48,7 +48,7 @@ a {
   margin: 20px 5%;
   display: flex !important;
   flex-direction: row !important;
-  justify-content: flex-end !important;
+  justify-content: center !important;
   align-items: center;
 }
 
@@ -102,6 +102,7 @@ a {
 .kg-bookmark-container {
   border: 1px solid lightgrey;
   display: flex;
+  background: rgb(248, 248, 248);
 }
 
 .kg-bookmark-content {
@@ -137,7 +138,15 @@ a {
 
 .kg-bookmark-metadata img {
   height: 20px;
+}
+
+.kg-bookmark-metadata > * {
   margin-right: 6px;
+}
+
+.kg-bookmark-metadata span:nth-child(3) {
+  border-left: 1px solid lightgrey;
+  padding-left: 5px;
 }
 
 .kg-bookmark-thumbnail {
@@ -155,6 +164,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
+  background: white;
 }
 
 .kg-card-hascaption {
@@ -200,5 +210,20 @@ figcaption {
 @media only screen and (max-width: 750px) {
   .kg-bookmark-card {
     padding: 10px 10%;
+  }
+
+  .kg-bookmark-metadata {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .kg-bookmark-metadata > * {
+    margin-right: 0px;
+    margin-top: 4px;
+  }
+
+  .kg-bookmark-metadata span:nth-child(3) {
+    border-left: none;
+    padding-left: 0px;
   }
 }
