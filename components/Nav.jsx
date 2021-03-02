@@ -6,34 +6,7 @@ import navStyles from "../styles/Nav.module.scss";
 const Nav = () => {
   const router = useRouter();
 
-  return router.pathname === "/" ||
-    router.pathname === "/about" ||
-    router.pathname === "/contact" ? (
-    <nav className={navStyles.nav}>
-      <Link href="/">
-        <a>
-          <h2>WILLEM PRINS</h2>
-        </a>
-      </Link>
-      <ul>
-        <li>
-          <CustomLink href="/">
-            <a>Home</a>
-          </CustomLink>
-        </li>
-        <li>
-          <CustomLink href="/about">
-            <a>About</a>
-          </CustomLink>
-        </li>
-        <li>
-          <CustomLink href="/contact">
-            <a>Contact</a>
-          </CustomLink>
-        </li>
-      </ul>
-    </nav>
-  ) : (
+  return (
     <nav className={navStyles.nav}>
       <Link href="/">
         <a>

@@ -26,8 +26,22 @@
 
 .container p {
   font-size: 18px;
-  padding: 10px 20%;
+  padding: 7px 20%;
   line-height: 1.8em;
+}
+
+.container a {
+  margin-top: 10px;
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.container a:hover {
+  padding-left: 20px;
+  padding-right: 20px;
+  background: black;
+  color: white;
 }
 
 @media only screen and (max-width: 1200px) {

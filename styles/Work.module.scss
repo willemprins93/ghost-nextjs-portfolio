@@ -35,6 +35,11 @@
   font-size: 120px;
 }
 
+.container h2 {
+  text-align: center;
+  padding: 0 5%;
+}
+
 .postGrid {
   padding: 50px 15%;
   display: flex;
@@ -69,10 +74,6 @@
   transition: all 0.15s ease-in-out;
   position: relative;
 }
-
-// .postCard:hover img {
-//   height: 156px !important;
-// }
 
 .excerpt {
   line-height: 1.1em;

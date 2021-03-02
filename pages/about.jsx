@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../styles/About.module.scss";
 
 const About = () => {
@@ -32,6 +33,9 @@ const About = () => {
         role where I can give 110% every day to work on creating compelling and
         meaningful projects!
       </p>
+      <Link href="/work">
+        <a>Click here to see my work!</a>
+      </Link>
     </div>
   );
 };
