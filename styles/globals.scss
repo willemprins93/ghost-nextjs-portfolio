@@ -205,11 +205,27 @@ figcaption {
   .kg-bookmark-card {
     padding: 10px 15%;
   }
+
+  .kg-image-card {
+    padding: 20px 0;
+    margin: 0;
+  }
+
+  .kg-gallery-image img {
+    padding: 20px 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .kg-card.kg-gallery-card.kg-width-wide {
+    margin: 20px 5%;
+  }
 }
 
 @media only screen and (max-width: 750px) {
   .kg-bookmark-card {
-    padding: 10px 10%;
+    padding: 10px 0;
+    margin: 0 20px;
   }
 
   .kg-bookmark-metadata {
@@ -225,5 +241,17 @@ figcaption {
   .kg-bookmark-metadata span:nth-child(3) {
     border-left: none;
     padding-left: 0px;
+  }
+
+  .kg-bookmark-content {
+    max-width: 66%;
+    padding: 10px;
+    -webkit-box-flex: 0.75;
+    flex-grow: 0.75;
+    font-size: 14px;
+  }
+
+  .kq-bookmark-title {
+    overflow-wrap: break-word;
   }
 }
