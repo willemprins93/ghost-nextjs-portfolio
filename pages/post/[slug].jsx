@@ -30,7 +30,6 @@ export const getStaticPaths = () => {
 
 const Post = (props) => {
   const { post } = props;
-  console.log("in the post: ", post);
 
   const router = useRouter();
 
