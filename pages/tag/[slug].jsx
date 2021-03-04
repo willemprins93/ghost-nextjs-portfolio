@@ -32,7 +32,7 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = async () => {
   const tags = await getTags();
-  const paths = await tags.map((tag) => {
+  const paths = tags.map((tag) => {
     return {
       params: {
         slug: tag.slug,
@@ -47,7 +47,6 @@ export const getStaticPaths = async () => {
 };
 
 const Tag = (props) => {
-  //   const posts = props.posts.sort((post) => (post.featured ? -1 : 1));
   const { posts, slug } = props;
 
   return (
