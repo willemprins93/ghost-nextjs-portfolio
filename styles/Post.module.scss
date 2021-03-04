@@ -85,7 +85,7 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
-  margin: 48px 43px 0 58px;
+  margin: 48px 43px 0 20%;
   padding: 0px 0 5px;
   font-weight: 400;
   border-bottom: 1px solid black;
@@ -111,6 +111,33 @@
   line-height: 1.05em;
   color: white;
   background: black;
+}
+.tagContainer {
+  position: relative;
+  max-height: 500px;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: -20px;
+}
+
+.tag {
+  padding: 5px 8px;
+  color: rgb(0, 0, 0);
+  margin: 0 15px 0 0;
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.2s ease-in-out;
+}
+
+.tag:hover {
+  border-color: black;
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 @media only screen and (min-width: 1201px) {
@@ -152,5 +179,32 @@
   .container ol,
   .container blockquote {
     padding: 15px 10%;
+  }
+
+  .backButton {
+    margin: 48px 58px 0 10%;
+  }
+
+  .tag {
+    padding: 3px 8px;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .tagContainer {
+    position: relative;
+    max-height: 500px;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: -20px;
   }
 }

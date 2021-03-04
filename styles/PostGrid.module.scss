@@ -75,28 +75,6 @@
   position: relative;
 }
 
-.excerpt {
-  line-height: 1.1em;
-  font-size: 14px;
-  font-weight: 200;
-  z-index: 998;
-  color: white;
-  background: white;
-  opacity: 0;
-  position: absolute;
-  top: 18px;
-  left: 0;
-  padding: 5px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  width: 100%;
-  transition: all 0.2s ease-in-out;
-}
-
-//cover excerpt during transition
 .postCard h3::after {
   content: "";
   line-height: 2em;
@@ -120,19 +98,13 @@
     padding: 2px 7px 56px;
   }
 
-  .postCard:hover .excerpt {
-    height: auto;
-    opacity: 1;
-    color: black;
-  }
-
   .postCard:hover h3::after {
     color: rgb(0, 0, 0);
     top: 36%;
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1301px) {
   .container {
     animation: none;
   }

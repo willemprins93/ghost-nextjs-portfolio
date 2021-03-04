@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Head from "next/head";
+import Link from "next/link";
 import Router, { useRouter } from "next/router";
 import styles from "../../styles/Post.module.scss";
 
@@ -8,7 +8,7 @@ const CONTENT_API_KEY = process.env.CONTENT_API_KEY;
 
 async function getPost(slug) {
   const res = await fetch(
-    `${BLOG_URL}/ghost/api/v3/content/posts/slug/${slug}/?key=${CONTENT_API_KEY}`
+    `${BLOG_URL}/ghost/api/v3/content/posts/slug/${slug}/?key=${CONTENT_API_KEY}&include=tags`
   ).then((res) => res.json());
 
   return res.posts[0];
@@ -32,6 +32,7 @@ const Post = (props) => {
   const { post } = props;
 
   const router = useRouter();
+  console.log(post);
 
   if (router.isFallback) {
     return <h1 className={styles.loading}>Loading...</h1>;
@@ -44,10 +45,19 @@ const Post = (props) => {
       </Head>
       <img className={styles.featureImage} src={post.feature_image} />
       <h1 className={styles.title}>{post.title}</h1>
+      <div className={styles.tagContainer}>
+        {post.tags.map((tag) => {
+          return (
+            <Link href={`/tag/${tag.slug}`}>
+              <a className={styles.tag}>{tag.name}</a>
+            </Link>
+          );
+        })}
+      </div>
       <div className={styles.backButtonContainer}>
-        <div onClick={() => Router.back()}>
-          <a className={styles.backButton}>Go Back</a>
-        </div>
+        <a className={styles.backButton} onClick={() => Router.back()}>
+          Go Back
+        </a>
       </div>
       <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </div>

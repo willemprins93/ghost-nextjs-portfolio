@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Head from "next/head";
-import styles from "../styles/Work.module.scss";
+import PostGrid from "../components/PostGrid";
+
+import styles from "../styles/PostGrid.module.scss";
 
 const BLOG_URL = process.env.BLOG_URL;
 const CONTENT_API_KEY = process.env.CONTENT_API_KEY;
@@ -25,23 +27,8 @@ const Work = (props) => {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Work</title>
-      </Head>
       <h2>Here's what I've been working on: </h2>
-      <div className={styles.postGrid}>
-        {posts.map((post) => (
-          <Link href={`/post/${post.slug}`} key={post.id}>
-            <div className={styles.postCard}>
-              <img src={post.feature_image} />
-              <h3>
-                {post.title}
-                {/* <p className={styles.excerpt}>{post.excerpt}</p> */}
-              </h3>
-            </div>
-          </Link>
-        ))}
-      </div>
+      <PostGrid posts={posts} />
     </div>
   );
 };
