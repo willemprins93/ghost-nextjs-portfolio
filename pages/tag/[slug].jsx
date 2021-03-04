@@ -14,6 +14,14 @@ async function getPosts(slug) {
   return res.posts;
 }
 
+async function getTags() {
+  const res = await fetch(
+    `${BLOG_URL}/ghost/api/v3/content/tags/?key=${CONTENT_API_KEY}`
+  ).then((res) => res.json());
+
+  return res.tags;
+}
+
 export const getStaticProps = async ({ params }) => {
   const posts = await getPosts(params.slug);
 
@@ -22,9 +30,18 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-export const getStaticPaths = () => {
+export const getStaticPaths = async () => {
+  const tags = await getTags();
+  const paths = await tags.map((tag) => {
+    return {
+      params: {
+        slug: tag.slug,
+      },
+    };
+  });
+
   return {
-    paths: [],
+    paths: paths,
     fallback: true,
   };
 };

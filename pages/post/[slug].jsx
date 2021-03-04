@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
+import { getJSDocTags } from "typescript";
 import styles from "../../styles/Post.module.scss";
 
 const BLOG_URL = process.env.BLOG_URL;
@@ -21,7 +22,7 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
-export const getStaticPaths = () => {
+export const getStaticPaths = async () => {
   return {
     paths: [],
     fallback: true,
