@@ -22,27 +22,22 @@ async function getTags() {
   return res.tags;
 }
 
+export const getStaticPaths = async () => {
+  const tags = await getTags();
+  const slugs = tags.map((tag) => tag.slug);
+  const paths = slugs.map((slug) => ({ params: { slug } }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
 export const getStaticProps = async ({ params }) => {
   const posts = await getPosts(params.slug);
 
   return {
     props: { posts, slug: params.slug },
-  };
-};
-
-export const getStaticPaths = async () => {
-  const tags = await getTags();
-  const paths = tags.map((tag) => {
-    return {
-      params: {
-        slug: tag.slug,
-      },
-    };
-  });
-
-  return {
-    paths: paths,
-    fallback: true,
   };
 };
 
