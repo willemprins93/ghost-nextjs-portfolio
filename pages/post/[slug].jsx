@@ -42,6 +42,7 @@ const Post = (props) => {
     <div className={styles.container}>
       <Head>
         <title>{post.title}</title>
+        <meta name="description" content={`${post.excerpt}`} />
       </Head>
       <img className={styles.featureImage} src={post.feature_image} />
       <h1 className={styles.title}>{post.title}</h1>

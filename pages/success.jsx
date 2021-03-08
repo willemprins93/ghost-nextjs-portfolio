@@ -9,6 +9,7 @@ const Success = (props) => {
     <div className={styles.container}>
       <Head>
         <title>Message sent</title>
+        <meta name="description" content="Message sent to Willem Prins." />
       </Head>
       <h1>Thank you for your message! ✨</h1>
       <h2>I will get back to you soon.</h2>

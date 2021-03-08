@@ -29,6 +29,10 @@ const Work = (props) => {
     <div className={styles.container}>
       <Head>
         <title>Work</title>
+        <meta
+          name="description"
+          content="Portfolio of Willem Prins, featuring a range of web development projects."
+        />
       </Head>
       <h2>Here's what I've been working on: </h2>
       <PostGrid posts={posts} />

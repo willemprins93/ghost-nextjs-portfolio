@@ -42,6 +42,10 @@ const Contact = (props) => {
     <div className={styles.container}>
       <Head>
         <title>Contact</title>
+        <meta
+          name="description"
+          content="Contact page of Willem Prins, a web developer from Amsterdam."
+        />
       </Head>
       <h1>Thoughts? Questions? 🍩? Send me a message!</h1>
       <form name="contact" method="POST" onSubmit={sendEmail} action="/about">

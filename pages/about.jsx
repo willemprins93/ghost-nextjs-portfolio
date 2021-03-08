@@ -7,6 +7,10 @@ const About = () => {
     <div className={styles.container}>
       <Head>
         <title>About</title>
+        <meta
+          name="description"
+          content="About page of Willem Prins, a web developer from Amsterdam."
+        />
       </Head>
       <h1>About me ✍️</h1>
       <p>

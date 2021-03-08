@@ -48,6 +48,10 @@ const Tag = (props) => {
     <div className={styles.container}>
       <Head>
         <title>Tag: {slug}</title>
+        <meta
+          name="description"
+          content={`Find all projects tagged: ${tag.slug}.`}
+        />
       </Head>
       <h2>Projects tagged: {slug}</h2>
       <PostGrid posts={posts} />

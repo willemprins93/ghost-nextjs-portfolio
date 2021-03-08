@@ -7,6 +7,10 @@ const Home = (props) => {
     <div className={styles.container}>
       <Head>
         <title>Willem Prins</title>
+        <meta
+          name="description"
+          content="This is the home page of Willem Prins, a web developer from Amsterdam."
+        />
       </Head>
       <h1>Hello!</h1>
       <h2>I am Willem. A web developer in London. Welcome to my website!</h2>
