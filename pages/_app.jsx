@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
         <link
           rel="icon"
           type="image/png"
-          href="public/wpportfolio_favicon.png"
+          href="../public/wpportfolio_favicon.png"
         />
       </Head>
       <Layout>
