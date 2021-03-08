@@ -50,7 +50,7 @@ const Tag = (props) => {
         <title>Tag: {slug}</title>
         <meta
           name="description"
-          content={`Find all projects tagged: ${tag.slug}.`}
+          content={`Find all projects tagged: ${slug}.`}
         />
       </Head>
       <h2>Projects tagged: {slug}</h2>
