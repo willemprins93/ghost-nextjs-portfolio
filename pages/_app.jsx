@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="icon" href="/wpportfolio_favicon.png" type="image/png" />
+        <meta lang="en-EN" />
       </Head>
       <Layout>
         <Component {...pageProps} />

@@ -20,13 +20,13 @@ const Footer = () => {
         >
           <Link href="mailto:willemprins93@gmail.com">
             <a className={footerStyles.contactIcon}>
-              <img src="/mail.svg" />
+              <img src="/mail.svg" alt="mail.svg" />
               {/* <i aria-hidden className="far fa-envelope"></i> */}
             </a>
           </Link>
           <Link href="https://www.linkedin.com/in/willem-prins-dev/">
             <a className={footerStyles.contactIcon}>
-              <img src="/linkedin.svg" />
+              <img src="/linkedin.svg" alt="linkedin.svg" />
               {/* <i aria-hidden className="fab fa-linkedin-in"></i> */}
             </a>
           </Link>
