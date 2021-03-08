@@ -42,9 +42,13 @@ const Contact = (props) => {
     <div className={styles.container}>
       <Head>
         <title>Contact</title>
+        <meta property="og:image" content="self_cutout.png" key="ogimage" />
+        <meta property="og:site_name" content="Willem Prins" key="ogsitename" />
+        <meta property="og:title" content="Contact" key="ogtitle" />
         <meta
-          name="description"
+          property="og:description"
           content="Contact page of Willem Prins, a web developer from Amsterdam."
+          key="ogdesc"
         />
       </Head>
       <h1>Thoughts? Questions? 🍩? Send me a message!</h1>

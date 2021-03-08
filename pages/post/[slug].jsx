@@ -42,7 +42,11 @@ const Post = (props) => {
     <div className={styles.container}>
       <Head>
         <title>{post.title}</title>
-        <meta name="description" content={`${post.excerpt}`} />
+
+        <meta property="og:image" content={post.feature_image} key="ogimage" />
+        <meta property="og:site_name" content="Willem Prins" key="ogsitename" />
+        <meta property="og:title" content={post.title} key="ogtitle" />
+        <meta property="og:description" content={post.excerpt} key="ogdesc" />
       </Head>
       <img
         className={styles.featureImage}

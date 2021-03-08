@@ -27,7 +27,7 @@
   padding: 5px 0;
 }
 
-.nav ul li a {
+.nav ul a {
   font-weight: 500;
   position: relative;
   color: white;
@@ -37,26 +37,26 @@
   transition: all 0.25s cubic-bezier(0.3, 0.885, 0.32, 1.275);
 }
 
-.nav ul li a::after {
+.nav ul a::after {
   position: absolute;
   z-index: -1;
   content: "";
   padding: 5px 10px;
   top: 0px;
   left: -9px;
-  width: 100%;
+  width: 100% !important;
   height: 0px;
   transition: all 0.25s cubic-bezier(0.3, 0.885, 0.32, 1.275);
 }
 
-.nav ul li a:hover::after {
+.nav ul a:hover::after {
   height: 20px;
   background: transparent;
   border: 1px solid white;
 }
 
 @media only screen and (max-width: 1000px) {
-  .nav ul li a {
+  .nav ul a {
     margin: 0 12px;
   }
 }

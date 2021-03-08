@@ -7,9 +7,13 @@ const About = () => {
     <div className={styles.container}>
       <Head>
         <title>About</title>
+        <meta property="og:image" content="self_cutout.png" key="ogimage" />
+        <meta property="og:site_name" content="Willem Prins" key="ogsitename" />
+        <meta property="og:title" content="About" key="ogtitle" />
         <meta
-          name="description"
+          property="og:description"
           content="About page of Willem Prins, a web developer from Amsterdam."
+          key="ogdesc"
         />
       </Head>
       <h1>About me ✍️</h1>

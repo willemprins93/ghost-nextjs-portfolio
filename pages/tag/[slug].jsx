@@ -48,9 +48,14 @@ const Tag = (props) => {
     <div className={styles.container}>
       <Head>
         <title>Tag: {slug}</title>
+
+        <meta property="og:image" content="self_cutout.png" key="ogimage" />
+        <meta property="og:site_name" content="Willem Prins" key="ogsitename" />
+        <meta property="og:title" content={`Tag: ${slug}`} key="ogtitle" />
         <meta
-          name="description"
+          property="og:description"
           content={`Find all projects tagged: ${slug}.`}
+          key="ogdesc"
         />
       </Head>
       <h2>Projects tagged: {slug}</h2>

@@ -7,9 +7,14 @@ const Home = (props) => {
     <div className={styles.container}>
       <Head>
         <title>Willem Prins</title>
+
+        <meta property="og:image" content="self_cutout.png" key="ogimage" />
+        <meta property="og:site_name" content="Willem Prins" key="ogsitename" />
+        <meta property="og:title" content="Home" key="ogtitle" />
         <meta
-          name="description"
+          property="og:description"
           content="This is the home page of Willem Prins, a web developer from Amsterdam."
+          key="ogdesc"
         />
       </Head>
       <h1>Hello!</h1>

@@ -29,9 +29,13 @@ const Work = (props) => {
     <div className={styles.container}>
       <Head>
         <title>Work</title>
+        <meta property="og:image" content="self_cutout.png" key="ogimage" />
+        <meta property="og:site_name" content="Willem Prins" key="ogsitename" />
+        <meta property="og:title" content="Work" key="ogtitle" />
         <meta
-          name="description"
-          content="Portfolio of Willem Prins, featuring a range of web development projects."
+          property="og:description"
+          content="Portfolio of Willem Prins, featuring a range of web dev projects."
+          key="ogdesc"
         />
       </Head>
       <h2>Here's what I've been working on: </h2>
