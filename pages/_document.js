@@ -10,7 +10,11 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="icon" type="image/png" href="wpportfolio_favicon.png" />
+          <link
+            rel="icon"
+            type="image/png"
+            href="public/wpportfolio_favicon.png"
+          />
         </Head>
         <body>
           <Main />
