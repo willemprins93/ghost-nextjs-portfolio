@@ -45,11 +45,18 @@
   outline: none;
 }
 
+.container label {
+  font-weight: 400;
+}
+
 .container input,
 .container textarea {
   font-family: "Manrope", sans-serif;
-  padding: 10px;
-  background: rgb(248, 248, 248);
+  font-size: 18px;
+  font-weight: 200;
+  padding: 10px 0px;
+  background: transparent;
+  border-bottom: 1px solid black;
 }
 
 .container button {
@@ -58,7 +65,7 @@
   padding: 10px 40px;
   background: black;
   color: white;
-  border: none;
+  border: 1px solid black;
   cursor: pointer;
   transition: color 0.15s ease-in-out, background 0.15s ease-in-out,
     padding 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -67,7 +74,7 @@
 .container button:hover {
   padding: 10px 60px;
   color: black;
-  background: rgb(230, 230, 230);
+  background: transparent;
 }
 
 .container span {

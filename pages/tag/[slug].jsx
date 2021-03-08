@@ -46,6 +46,9 @@ const Tag = (props) => {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Tag: {slug}</title>
+      </Head>
       <h2>Projects tagged: {slug}</h2>
       <PostGrid posts={posts} />
     </div>

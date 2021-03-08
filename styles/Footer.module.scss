@@ -42,11 +42,11 @@
 
 .contactIcon {
   background: black;
+  border: 1px solid black;
   height: 40px;
   width: 40px;
   margin: 5px 10px;
   padding-bottom: 0px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +65,7 @@
 }
 
 .contactIcon:hover {
-  background: white;
+  background: transparent;
 }
 
 .contactIcon:hover img {

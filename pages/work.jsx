@@ -27,6 +27,9 @@ const Work = (props) => {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Work</title>
+      </Head>
       <h2>Here's what I've been working on: </h2>
       <PostGrid posts={posts} />
     </div>

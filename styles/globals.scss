@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
+$bgColor: rgb(248, 248, 248);
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "Manrope", sans-serif;
-  background-color: white;
+  background-color: $bgColor;
   font-weight: 300;
 }
 
@@ -80,14 +82,13 @@ a {
 
 .selected {
   position: relative;
-  color: black !important;
 }
 
 .selected::after {
   position: absolute;
   z-index: -1;
   content: "";
-  background: white;
+  border: 1px solid white;
   padding: 5px 10px;
   top: -4px;
   left: -9px;

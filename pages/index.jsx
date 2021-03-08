@@ -11,7 +11,7 @@ const Home = (props) => {
       <h1>Hello!</h1>
       <h2>I am Willem. A web developer in London. Welcome to my website!</h2>
       <Link href="/about">
-        <img src="IMG_3930.jpeg" alt="willem-portrait" />
+        <img src="self_cutout.png" alt="willem-portrait" />
       </Link>
     </div>
   );

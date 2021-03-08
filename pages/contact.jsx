@@ -62,7 +62,7 @@ const Contact = (props) => {
           <label htmlFor="message">
             Message <span>*</span>
           </label>
-          <textarea name="message" rows="8" required />
+          <textarea name="message" rows="7" required />
         </p>
         <p>
           <button type="submit">Send</button>
