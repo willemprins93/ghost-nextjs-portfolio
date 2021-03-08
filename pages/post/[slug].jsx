@@ -44,7 +44,11 @@ const Post = (props) => {
         <title>{post.title}</title>
         <meta name="description" content={`${post.excerpt}`} />
       </Head>
-      <img className={styles.featureImage} src={post.feature_image} />
+      <img
+        className={styles.featureImage}
+        src={post.feature_image}
+        alt={post.slug}
+      />
       <h1 className={styles.title}>{post.title}</h1>
       <div className={styles.tagContainer}>
         {post.tags.map((tag) => {

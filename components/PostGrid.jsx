@@ -9,7 +9,7 @@ const PostGrid = ({ posts }) => {
       {posts.map((post) => (
         <Link href={`/post/${post.slug}`} key={post.id}>
           <div className={styles.postCard}>
-            <img src={post.feature_image} />
+            <img src={post.feature_image} alt={post.slug} />
             <h3>{post.title}</h3>
           </div>
         </Link>
