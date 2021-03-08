@@ -5,13 +5,6 @@ import "../styles/globals.scss";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <link
-          rel="icon"
-          type="image/png"
-          href="../public/wpportfolio_favicon.png"
-        />
-      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>
