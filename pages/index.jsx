@@ -8,7 +8,11 @@ const Home = (props) => {
       <Head>
         <title>Willem Prins</title>
 
-        <meta property="og:image" content="self_cutout.png" key="ogimage" />
+        <meta
+          property="og:image"
+          content="home_page_screen.png"
+          key="ogimage"
+        />
         <meta property="og:site_name" content="Willem Prins" key="ogsitename" />
         <meta property="og:title" content="Home" key="ogtitle" />
         <meta
