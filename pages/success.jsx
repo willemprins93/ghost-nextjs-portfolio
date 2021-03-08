@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import styles from "../styles/Success.module.scss";
+import styles from "styles/Success.module.scss";
 
 const Success = (props) => {
   // const posts = props.posts.posts;

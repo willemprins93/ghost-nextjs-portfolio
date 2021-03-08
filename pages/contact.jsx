@@ -3,7 +3,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import emailjs from "emailjs-com";
 
-import styles from "../styles/Contact.module.scss";
+import styles from "styles/Contact.module.scss";
 
 export const getStaticProps = async ({ params }) => {
   return {

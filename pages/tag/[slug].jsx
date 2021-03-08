@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
-import PostGrid from "../../components/PostGrid";
-import styles from "../../styles/PostGrid.module.scss";
+import PostGrid from "components/PostGrid";
+import styles from "styles/PostGrid.module.scss";
 
 const BLOG_URL = process.env.BLOG_URL;
 const CONTENT_API_KEY = process.env.CONTENT_API_KEY;

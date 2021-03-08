@@ -1,7 +1,7 @@
-import CustomLink from "./CustomLink";
+import CustomLink from "components/CustomLink";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import navStyles from "../styles/Nav.module.scss";
+import navStyles from "styles/Nav.module.scss";
 
 const Nav = () => {
   const router = useRouter();

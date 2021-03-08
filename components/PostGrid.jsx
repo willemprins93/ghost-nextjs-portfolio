@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
-import styles from "../styles/PostGrid.module.scss";
+import styles from "styles/PostGrid.module.scss";
 import { useState } from "react";
 
 const PostGrid = ({ posts }) => {
