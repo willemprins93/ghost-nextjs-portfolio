@@ -9,6 +9,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
+        <Head>
+          <link rel="icon" href="/wpportfolio_favicon.png" type="image/png" />
+        </Head>
         <body>
           <Main />
           <NextScript />

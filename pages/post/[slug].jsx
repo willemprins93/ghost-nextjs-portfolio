@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import Router, { useRouter } from "next/router";
-import { getJSDocTags } from "typescript";
 import styles from "styles/Post.module.scss";
 
 const BLOG_URL = process.env.BLOG_URL;
@@ -49,7 +48,7 @@ const Post = (props) => {
       <div className={styles.tagContainer}>
         {post.tags.map((tag) => {
           return (
-            <Link href={`/tag/${tag.slug}`}>
+            <Link href={`/tag/${tag.slug}`} key={tag.slug}>
               <a className={styles.tag}>{tag.name}</a>
             </Link>
           );
