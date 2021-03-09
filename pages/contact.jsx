@@ -15,6 +15,11 @@ export const getStaticProps = async ({ params }) => {
   };
 };
 
+const validateEmail = (email) => {
+  var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+};
+
 const Contact = (props) => {
   const router = useRouter();
 
@@ -23,19 +28,22 @@ const Contact = (props) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    console.log(e.target);
-
-    emailjs
-      .sendForm(`${SERVICE_ID}`, `${TEMPLATE_ID}`, e.target, `${USER_ID}`)
-      .then(
-        (result) => {
-          console.log(result.text);
-          router.push("/success");
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    if (validateEmail(e.target.email.value) === false) {
+      alert(`Invalid email entered.`);
+      router.reload();
+    } else {
+      emailjs
+        .sendForm(`${SERVICE_ID}`, `${TEMPLATE_ID}`, e.target, `${USER_ID}`)
+        .then(
+          (result) => {
+            console.log(result.text);
+            router.push("/success");
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
   };
 
   return (
