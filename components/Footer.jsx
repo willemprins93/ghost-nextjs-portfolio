@@ -30,6 +30,12 @@ const Footer = () => {
               {/* <i aria-hidden className="fab fa-linkedin-in"></i> */}
             </a>
           </Link>
+          <Link href="https://github.com/willemprins93">
+            <a className={footerStyles.contactIcon}>
+              <img src="/github.svg" alt="github.svg" />
+              {/* <i aria-hidden className="fab fa-linkedin-in"></i> */}
+            </a>
+          </Link>
         </div>
       </div>
       <div className={footerStyles.column}>
